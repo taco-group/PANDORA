@@ -34,7 +34,7 @@
           environment, significantly outperforming baselines in both pre-
           cision and expressiveness. Ablation studies validate the critical
           contributions of diffusion-based denoising and LLM-driven
-          semantic feedback in enhancing robotic musicianship</p>
+          semantic feedback in enhancing robotic musicianship.</p>
         <div class="buttons">
             <a href="#" class="btn">Read Paper</a>
             <a href="#" class="btn">GitHub Repo</a>
@@ -43,24 +43,28 @@
     
     <section class="method">
         <h2>Methodology</h2>
-        <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image" style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);">
-      </div>
-        <p>The pipeline begins with the robot state <code>s_t</code> and goal state <code>g_t</code> that condition a U-Net (via FiLM)
-          to iteratively denoise an initial noisy action <code>x_t</code> into <code>x_0</code> using DDIM.
-          The denoised action <code>x_0</code> is then added to the IK solver’s output <code>q</code>
-          (residual combination) to form the final action, which is executed in MuJoCo.
-          An Oracle Reward module, driven by a large language model, evaluates the performance
-          based on style and accuracy.
+        <div style="text-align: center;">
+            <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image" style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);">
+        </div>
+        <p>
+            The pipeline begins with the robot state \(s_t\) and goal state \(g_t\) that condition a U-Net (via FiLM)
+            to iteratively denoise an initial noisy action \(x_t\) into \(x_0\) using DDIM.
+            The denoised action \(x_0\) is then added to the IK solver’s output \(q\)
+            (residual combination) to form the final action, which is executed in MuJoCo.
+            An Oracle Reward module, driven by a large language model, evaluates the performance
+            based on style and accuracy.
         </p>
         <script type="text/javascript" async
-          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
         </script>
     </section>
     
     <section class="results">
         <h2>Results & Performance</h2>
         <p>PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
-        <img src="Table1.png" alt="Results Graph" class="image">
+        <div style="text-align: center;">
+            <img src="Table1.png" alt="Results Graph" class="image" style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);">
+        </div>
     </section>
     
     <footer>
