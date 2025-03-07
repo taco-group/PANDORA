@@ -43,7 +43,8 @@
     
     <section class="method">
         <h2>Methodology</h2>
-        <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image">
+        <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image" style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);">
+      </div>
         <p>The pipeline begins with the robot state <code>s_t</code> and goal state <code>g_t</code> that condition a U-Net (via FiLM)
           to iteratively denoise an initial noisy action <code>x_t</code> into <code>x_0</code> using DDIM.
           The denoised action <code>x_0</code> is then added to the IK solver’s output <code>q</code>
@@ -51,6 +52,9 @@
           An Oracle Reward module, driven by a large language model, evaluates the performance
           based on style and accuracy.
         </p>
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
     </section>
     
     <section class="results">
