@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PANDORA: Diffusion Policy Learning for Dexterous Robotic Piano Playing</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
 </head>
 <body>
   <div class="header-container">
-    <img src="school.png" alt="School Logo">
-    <img src="TACO-Group.png" alt="Lab Logo">
+    <img src="school.png" alt="School Logo" class="header-logo">
+    <img src="TACO-Group.png" alt="Lab Logo" class="header-logo">
   </div>
     <header>
       <h1>PANDORA <img src="icon.webp" alt="PANDORA Logo" class="logo"></h1>
@@ -17,7 +20,7 @@
     
     <section class="intro">
         <h2>Abstract</h2>
-        <p>We present PANDORA, a novel diffusion-based
+        <p class="text-justify">We present PANDORA, a novel diffusion-based
           policy learning framework designed specifically for dexterous
           robotic piano performance. Our approach employs a condi-
           tional U-Net architecture enhanced with FiLM-based global
@@ -43,10 +46,10 @@
     
     <section class="method">
         <h2>Methodology</h2>
-        <div style="text-align: center;">
-            <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image" style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);">
+        <div class="image-container">
+            <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image">
         </div>
-        <p>
+        <p class="text-justify">
             The pipeline begins with the robot state \(s_t\) and goal state \(g_t\) that condition a U-Net (via FiLM)
             to iteratively denoise an initial noisy action \(x_t\) into \(x_0\) using DDIM.
             The denoised action \(x_0\) is then added to the IK solver’s output \(q\)
@@ -54,16 +57,13 @@
             An Oracle Reward module, driven by a large language model, evaluates the performance
             based on style and accuracy.
         </p>
-        <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-        </script>
     </section>
     
     <section class="results">
         <h2>Results & Performance</h2>
-        <p>PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
-        <div style="text-align: center;">
-            <img src="Table1.png" alt="Results Graph" class="image" style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);">
+        <p class="text-justify">PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
+        <div class="image-container">
+            <img src="Table1.png" alt="Results Graph" class="image">
         </div>
     </section>
     
