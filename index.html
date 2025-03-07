@@ -1,48 +1,88 @@
-import { useState } from 'react';
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PANDORA: 项目标题</title>
+  <link rel="stylesheet" href="styles.css"> <!-- 调用外部CSS文件 -->
+</head>
+<body>
 
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center text-gray-900">
-      <header className="w-full py-6 bg-gradient-to-r from-black to-gray-800 text-white text-center text-4xl font-extrabold shadow-md relative flex justify-center items-center">
-        <span className="mr-2">PANDORA</span>
-        <img src="/icon.webp" alt="PANDORA Logo" className="w-8 h-8 inline-block" />
-      </header>
-      
-      {/* Introduction */}
-      <section className="max-w-4xl p-8 text-center">
-        <h2 className="text-3xl font-bold">A Diffusion-Based Policy Learning Framework for Dexterous Robotic Piano Performance</h2>
-        <p className="mt-4 text-lg leading-relaxed">
-          PANDORA employs a conditional U-Net with FiLM-based global conditioning, iteratively denoising noisy actions into smooth, expressive trajectories.
-        </p>
-        <div className="mt-6 flex justify-center space-x-4">
-          <Button className="bg-blue-600 hover:bg-blue-700 transition-all">Read Paper</Button>
-          <Button className="bg-gray-800 hover:bg-gray-900 transition-all">GitHub Repo</Button>
-        </div>
-      </section>
-      
-      {/* Method Overview */}
-      <section className="max-w-4xl p-8">
-        <h2 className="text-3xl font-bold text-center">Methodology</h2>
-        <motion.img src="/pipeline.png" alt="PANDORA Pipeline" className="mt-6 rounded-xl shadow-lg border border-gray-300" whileHover={{ scale: 1.05 }} />
-        <p className="mt-4 text-lg text-center leading-relaxed">
-          The model conditions a U-Net to iteratively denoise initial noisy actions into final trajectories using DDIM. An LLM-driven Oracle evaluates musical expressiveness.
-        </p>
-      </section>
-      
-      {/* Results */}
-      <section className="max-w-4xl p-8 text-center">
-        <h2 className="text-3xl font-bold">Results & Performance</h2>
-        <p className="mt-4 text-lg leading-relaxed">PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
-        <motion.img src="/results.png" alt="Results Graph" className="mt-6 rounded-xl shadow-lg border border-gray-300" whileHover={{ scale: 1.05 }} />
-      </section>
-      
-      {/* Footer */}
-      <footer className="w-full py-6 bg-black text-white text-center mt-12 text-lg font-medium shadow-md">
-        Developed by <span className="font-bold">TACO-Group</span> | 2025
-      </footer>
-    </div>
-  );
-}
+  <h1>PANDORA</h1>
+  <h2>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h2>
+
+  <section id="introduction">
+    <p>We present PANDORA, a novel diffusion-based policy learning framework designed specifically for dexterous robotic piano performance. Our approach employs a conditional U-Net architecture enhanced with FiLM-based global conditioning, which iteratively denoises noisy action sequences into smooth, high-dimensional trajectories. To achieve precise key execution coupled with expressive musical performance, we design a composite reward function that integrates task-specific accuracy, audio fidelity, and high-level semantic feedback from a large language model (LLM) oracle. The LLM oracle assesses musical expressiveness and stylistic nuances, enabling dynamic, hand-specific reward adjustments. Further augmented by a residual inverse-kinematics refinement policy, PANDORA achieves state-of-the-art performance in the ROBOPIANIST environment, significantly outperforming baselines in both precision and expressiveness. Ablation studies validate the critical contributions of diffusion-based denoising and LLM-driven semantic feedback in enhancing robotic musicianship.</p>
+  </section>
+
+  <hr>
+
+  <section id="highlights">
+    <h3>亮点</h3>
+    <ul>
+      <li>PANDORA方法在多个任务上表现出色...</li>
+      <li>我们的方法能处理高维动作空间并保持训练稳定...</li>
+    </ul>
+    <img src="Pipeline_PANDORA.jpg" alt="Pipeline" width="600">
+    <p>Figure 1: Pipeline of our diffusion-based policy learning. The pipeline begins with the robot state \(s_t\) and goal state \(g_t\) that condition a U-Net (via FiLM) to iteratively denoise an initial noisy action \(x_t\) into \(x_0\) using DDIM. The denoised action \(x_0\) is then added to the IK solver’s output \(q\) (residual combination) to form the final action, which is executed in MuJoCo. An Oracle Reward module, driven by a large language model, evaluates the performance based on style and accuracy.</p>
+  </section>
+
+  <hr>
+
+  <section id="simulation-benches">
+    <h3>模拟基准</h3>
+    <p>（模拟实验性能对比的描述，可附表格或图片）</p>
+  </section>
+
+  <hr>
+
+  <section id="code-and-data">
+    <h3>代码和数据</h3>
+    <p>项目的代码开源地址：<a href="https://github.com/taco-group/PANDORA">GitHub - taco-group/PANDORA</a>。</p>
+    <p>数据集下载链接...（如果有的话）</p>
+  </section>
+
+  <hr>
+
+  <section id="paper">
+    <h3>论文</h3>
+    <p>引用论文：<br>
+       Author1, Author2, ... **PANDORA: ...** <em>Conference/Journal Year</em>.<br>
+       可附上论文的PDF链接，例如 <a href="#">arXiv 链接</a> 等。</p>
+  </section>
+
+  <hr>
+
+  <section id="bibtex">
+    <h3>Bibtex</h3>
+    <pre>
+      <!-- 在此处填写您的BibTeX代码 -->
+    </pre>
+  </section>
+
+  <hr>
+
+  <section id="team">
+    <h3>团队</h3>
+    <ul>
+      <li>Alice (Affiliation)</li>
+      <li>Bob (Affiliation)</li>
+      <!-- 根据需要添加更多团队成员 -->
+    </ul>
+  </section>
+
+  <hr>
+
+  <section id="acknowledgements">
+    <h3>致谢</h3>
+    <p>感谢任何资助来源或贡献者。</p>
+  </section>
+
+  <hr>
+
+  <section id="contact">
+    <h3>联系方式</h3>
+    <p>提供联系信息。</p>
+  </section>
+
+</body>
+</html>
