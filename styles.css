@@ -25,19 +25,17 @@ header {
 }
 
 section {
-    max-width: 900px;
+    max-width: 800px;
     margin: 40px auto;
-    padding: 40px;
+    padding: 20px;
     background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    text-align: left;
 }
 
 h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    text-align: center;
 }
 
 p {
@@ -55,7 +53,6 @@ p {
 
 .buttons {
     margin-top: 20px;
-    text-align: center;
 }
 
 .btn {
@@ -80,5 +77,4 @@ footer {
     padding: 15px;
     margin-top: 40px;
     font-size: 18px;
-    text-align: center;
 }
