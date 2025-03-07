@@ -1,72 +1,80 @@
-/* 全局样式 */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
     color: #333;
-    /* 让 body 内所有 inline 元素居中（如文本、inline-block） */
-    text-align: center; 
+    text-align: center;
 }
 
-/* 头部 */
 header {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
+    background: linear-gradient(to right, #000, #444);
+    color: white;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-/* 主体内容区域 */
-/* 如果你想让页面主要内容宽度固定并居中，可以给它一个容器，比如 <main> 或 <div id="main"> */
-main {
-    /* 让 main 这个容器在页面中水平居中 */
-    display: inline-block;
-    width: 80%;        /* 视需要调整宽度 */
-    max-width: 1000px; /* 视需要调整最大宽度 */
-    text-align: left;  /* 容器内文本左对齐，如果要全部居中可以改为 center */
-    margin: 20px auto; /* 上下留白 20px，左右 auto 实现水平居中 */
+.logo {
+    width: 30px;
+    height: 30px;
 }
 
-/* 每个 section 的基本样式 */
 section {
+    max-width: 800px;
+    margin: 40px auto;
     padding: 20px;
-    margin: 20px 0; /* 上下 20px 间距，左右去掉以保持居中布局 */
-    background: #fff;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-/* 标题样式 */
-h1, h2, h3 {
-    color: #444;
-    text-align: center; /* 标题居中 */
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-/* 列表样式 */
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
+p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-/* 图片样式 */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* 如果需要单独给 pipeline 图片一个类，可以加上： */
-.pipeline {
-    display: block;
-    margin: 10px auto; /* 图片上下 10px 间距，并在父元素内水平居中 */
-    max-width: 100%;
-    height: auto;
-}
-
-/* 页脚 */
-footer {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 10px;
-    /* 如果不想固定在页面底部，可去掉下面两行 */
-    position: fixed;
+.image {
     width: 100%;
-    bottom: 0;
+    max-width: 600px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background: #007bff;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 18px;
 }
