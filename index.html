@@ -3,17 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PANDORA - Diffusion Policy Learning</title>
+    <title>PANDORA: Diffusion Policy Learning for Dexterous Robotic Piano Playing</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="header-container">
+    <img src="school.png" alt="School Logo">
+    <img src="TACO-Group.png" alt="Lab Logo">
+  </div>
     <header>
-        <h1>PANDORA <img src="icon.webp" alt="PANDORA Logo" class="logo"></h1>
+      <h1>PANDORA <img src="icon.webp" alt="PANDORA Logo" class="logo"></h1>
     </header>
     
     <section class="intro">
-        <h2>A Diffusion-Based Policy Learning Framework for Dexterous Robotic Piano Performance</h2>
-        <p>PANDORA employs a conditional U-Net with FiLM-based global conditioning, iteratively denoising noisy actions into smooth, expressive trajectories.</p>
+        <h2>Abstract</h2>
+        <p>We present PANDORA, a novel diffusion-based
+          policy learning framework designed specifically for dexterous
+          robotic piano performance. Our approach employs a condi-
+          tional U-Net architecture enhanced with FiLM-based global
+          conditioning, which iteratively denoises noisy action sequences
+          into smooth, high-dimensional trajectories. To achieve precise
+          key execution coupled with expressive musical performance, we
+          design a composite reward function that integrates task-specific
+          accuracy, audio fidelity, and high-level semantic feedback from
+          a large language model (LLM) oracle. The LLM oracle as-
+          sesses musical expressiveness and stylistic nuances, enabling dy-
+          namic, hand-specific reward adjustments. Further augmented
+          by a residual inverse-kinematics refinement policy, PANDORA
+          achieves state-of-the-art performance in the ROBOPIANIST
+          environment, significantly outperforming baselines in both pre-
+          cision and expressiveness. Ablation studies validate the critical
+          contributions of diffusion-based denoising and LLM-driven
+          semantic feedback in enhancing robotic musicianship</p>
         <div class="buttons">
             <a href="#" class="btn">Read Paper</a>
             <a href="#" class="btn">GitHub Repo</a>
@@ -22,7 +43,7 @@
     
     <section class="method">
         <h2>Methodology</h2>
-        <img src="pipeline.png" alt="PANDORA Pipeline" class="image">
+        <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image">
         <p>The model conditions a U-Net to iteratively denoise initial noisy actions into final trajectories using DDIM. An LLM-driven Oracle evaluates musical expressiveness.</p>
     </section>
     

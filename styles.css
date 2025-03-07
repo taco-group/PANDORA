@@ -7,6 +7,19 @@ body {
     text-align: center;
 }
 
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: white;
+}
+
+.header-container img {
+    height: 50px;
+    margin: 0 15px;
+}
+
 header {
     background: linear-gradient(to right, #000, #444);
     color: white;
@@ -46,6 +59,7 @@ h2 {
 p {
     font-size: 18px;
     line-height: 1.6;
+    color: #666;
 }
 
 .image {
