@@ -10,15 +10,15 @@
     </script>
 </head>
 <body>
-  <div class="header-container">
-    <img src="school.png" alt="School Logo" class="header-logo">
-    <img src="TACO-Group.png" alt="Lab Logo" class="header-logo">
+  <div class="header-container" style="display: flex; justify-content: center; align-items: center; padding: 10px 0;">
+    <img src="school.png" alt="School Logo" class="header-logo" style="height: 50px; margin-right: 20px;">
+    <img src="TACO-Group.png" alt="Lab Logo" class="header-logo" style="height: 50px;">
   </div>
-    <header>
+    <header style="background: none; box-shadow: none; margin-top: -20px;">
       <h1>PANDORA <img src="icon.webp" alt="PANDORA Logo" class="logo"></h1>
     </header>
     
-    <section class="intro">
+    <section class="intro section">
         <h2>Abstract</h2>
         <p class="text-justify">We present PANDORA, a novel diffusion-based
           policy learning framework designed specifically for dexterous
@@ -44,7 +44,9 @@
         </div>
     </section>
     
-    <section class="method">
+    <hr class="section-divider">
+    
+    <section class="method section">
         <h2>Methodology</h2>
         <div class="image-container">
             <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image">
@@ -59,7 +61,9 @@
         </p>
     </section>
     
-    <section class="results">
+    <hr class="section-divider">
+    
+    <section class="results section">
         <h2>Results & Performance</h2>
         <p class="text-justify">PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
         <div class="image-container">
