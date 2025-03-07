@@ -1,39 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PANDORA - Diffusion Policy Learning</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>PANDORA <img src="icon.webp" alt="PANDORA Logo" class="logo"></h1>
-    </header>
-    
-    <section class="intro">
-        <h2>A Diffusion-Based Policy Learning Framework for Dexterous Robotic Piano Performance</h2>
-        <p>PANDORA employs a conditional U-Net with FiLM-based global conditioning, iteratively denoising noisy actions into smooth, expressive trajectories.</p>
-        <div class="buttons">
-            <a href="#" class="btn">Read Paper</a>
-            <a href="#" class="btn">GitHub Repo</a>
+import { useState } from 'react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center text-gray-900">
+      <header className="w-full py-6 bg-gradient-to-r from-black to-gray-800 text-white text-center text-4xl font-extrabold shadow-md relative flex justify-center items-center">
+        <span className="mr-2">PANDORA</span>
+        <img src="/icon.webp" alt="PANDORA Logo" className="w-8 h-8 inline-block" />
+      </header>
+      
+      {/* Introduction */}
+      <section className="max-w-4xl p-8 text-center">
+        <h2 className="text-3xl font-bold">A Diffusion-Based Policy Learning Framework for Dexterous Robotic Piano Performance</h2>
+        <p className="mt-4 text-lg leading-relaxed">
+          PANDORA employs a conditional U-Net with FiLM-based global conditioning, iteratively denoising noisy actions into smooth, expressive trajectories.
+        </p>
+        <div className="mt-6 flex justify-center space-x-4">
+          <Button className="bg-blue-600 hover:bg-blue-700 transition-all">Read Paper</Button>
+          <Button className="bg-gray-800 hover:bg-gray-900 transition-all">GitHub Repo</Button>
         </div>
-    </section>
-    
-    <section class="method">
-        <h2>Methodology</h2>
-        <img src="pipeline.png" alt="PANDORA Pipeline" class="image">
-        <p>The model conditions a U-Net to iteratively denoise initial noisy actions into final trajectories using DDIM. An LLM-driven Oracle evaluates musical expressiveness.</p>
-    </section>
-    
-    <section class="results">
-        <h2>Results & Performance</h2>
-        <p>PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
-        <img src="results.png" alt="Results Graph" class="image">
-    </section>
-    
-    <footer>
-        Developed by <strong>TACO-Group</strong> | 2025
-    </footer>
-</body>
-</html>
+      </section>
+      
+      {/* Method Overview */}
+      <section className="max-w-4xl p-8">
+        <h2 className="text-3xl font-bold text-center">Methodology</h2>
+        <motion.img src="/pipeline.png" alt="PANDORA Pipeline" className="mt-6 rounded-xl shadow-lg border border-gray-300" whileHover={{ scale: 1.05 }} />
+        <p className="mt-4 text-lg text-center leading-relaxed">
+          The model conditions a U-Net to iteratively denoise initial noisy actions into final trajectories using DDIM. An LLM-driven Oracle evaluates musical expressiveness.
+        </p>
+      </section>
+      
+      {/* Results */}
+      <section className="max-w-4xl p-8 text-center">
+        <h2 className="text-3xl font-bold">Results & Performance</h2>
+        <p className="mt-4 text-lg leading-relaxed">PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
+        <motion.img src="/results.png" alt="Results Graph" className="mt-6 rounded-xl shadow-lg border border-gray-300" whileHover={{ scale: 1.05 }} />
+      </section>
+      
+      {/* Footer */}
+      <footer className="w-full py-6 bg-black text-white text-center mt-12 text-lg font-medium shadow-md">
+        Developed by <span className="font-bold">TACO-Group</span> | 2025
+      </footer>
+    </div>
+  );
+}
