@@ -25,25 +25,14 @@ body {
 /* 让图标放在 PANDORA 右上角 */
 .title-container {
     position: relative;
-    display: inline-block; /* 让内容不会换行 */
-}
-
-.icon-container {
-    position: absolute;
-    top: -8px; /* 上移到右上角 */
-    right: -12px; /* 向右调整 */
-}
-
-.logo {
-    width: 18px; /* 缩小图标 */
-    height: auto;
+    display: inline-block;
 }
 
 /* 标题部分 */
 header {
     background: none;
     color: black;
-    padding: 30px 0; /* 增加 padding 让标题有更多空间 */
+    padding: 30px 0;
     font-size: 24px;
     font-weight: bold;
     display: flex;
@@ -55,52 +44,38 @@ header {
 
 /* PANDORA 标题变大 */
 h1 {
-    font-size: 60px; /* 让 PANDORA 变大 */
+    font-size: 60px;
     font-weight: bold;
-    margin-bottom: 30px; /* 增加和副标题的间距 */
+    margin-bottom: 10px;
 }
 
 /* 副标题变灰色并增加间距 */
 h2 {
     font-size: 28px;
     font-weight: normal;
-    color: #777; /* 变成灰色 */
-    margin-top: 10px; /* 增加间距，使它和 PANDORA 更远 */
+    color: #777;
+    margin-top: 10px;
 }
 
-/* 取消白色背景 */
-section {
+/* 让 Pipeline 图片紧贴标题 */
+.pipeline {
     max-width: 1100px;
-    margin: 30px auto;
-    padding: 30px;
-    background: none; /* 取消白色背景 */
-    box-shadow: none; /* 取消阴影 */
+    margin: 20px auto 10px auto; /* 上下间距调整 */
+    padding: 10px;
     text-align: center;
 }
 
-/* 让文本更贴近两侧 */
-p {
-    font-size: 20px;
-    line-height: 1.5;
-    color: #666;
-    text-align: justify;
-    max-width: 95%;
-    margin: 0 auto;
-}
-
-/* 图片样式 */
-.image {
+/* Pipeline 图片样式 */
+.pipeline-image {
     width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    display: block;
+    max-width: 1000px;
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* 按钮样式 */
+/* 交互按钮样式 */
 .buttons {
-    margin-top: 20px;
+    margin: 10px auto 30px auto; /* 让按钮和 Pipeline 图片有合理间距 */
     text-align: center;
 }
 
@@ -120,6 +95,16 @@ p {
     background: #0056b3;
 }
 
+/* 让文本更贴近两侧 */
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #666;
+    text-align: justify;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
 /* 页脚 */
 footer {
     background: black;
@@ -128,42 +113,4 @@ footer {
     margin-top: 40px;
     font-size: 18px;
     text-align: center;
-}
-
-/* Demo 版块样式 */
-.demo {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 30px;
-    background: none;
-    text-align: center;
-}
-
-/* 让视频保持合适的大小 */
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.video-container video {
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-}
-.pipeline {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* 让 Pipeline 图片更大 */
-.pipeline-image {
-    width: 95%;  /* 增加宽度 */
-    max-width: 1200px;  /* 限制最大宽度 */
-    border-radius: 10px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }

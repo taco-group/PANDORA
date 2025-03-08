@@ -16,25 +16,33 @@
     </div>
 
     <header>
-      <div class="title-container">
-          <h1>PANDORA</h1>
-      </div>
-      <h2>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h2>
+        <div class="title-container">
+            <h1>PANDORA</h1>
+        </div>
+        <h2>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h2>
     </header>
 
+    <!-- Pipeline 图片 -->
+    <section class="pipeline">
+        <img src="Pipeline.png" alt="PANDORA Pipeline" class="pipeline-image">
+    </section>
+
+    <!-- 交互按钮 -->
+    <div class="buttons">
+        <a href="#" class="btn">Read Paper</a>
+        <a href="#" class="btn">GitHub Repo</a>
+    </div>
+
     <section class="method">
-      <div class="image-container">
-          <img src="Pipeline.png" alt="PANDORA Pipeline" class="image">
-      </div>
-      <p>
-          The pipeline begins with the robot state \(s_t\) and goal state \(g_t\) that condition a U-Net (via FiLM)
-          to iteratively denoise an initial noisy action \(x_t\) into \(x_0\) using DDIM.
-          The denoised action \(x_0\) is then added to the IK solver’s output \(q\)
-          (residual combination) to form the final action, which is executed in MuJoCo.
-          An Oracle Reward module, driven by a large language model, evaluates the performance
-          based on style and accuracy.
-      </p>
-  </section>
+        <p>
+            The pipeline begins with the robot state \(s_t\) and goal state \(g_t\) that condition a U-Net (via FiLM)
+            to iteratively denoise an initial noisy action \(x_t\) into \(x_0\) using DDIM.
+            The denoised action \(x_0\) is then added to the IK solver’s output \(q\)
+            (residual combination) to form the final action, which is executed in MuJoCo.
+            An Oracle Reward module, driven by a large language model, evaluates the performance
+            based on style and accuracy.
+        </p>
+    </section>
 
     <section class="intro">
         <h2>Abstract</h2>
@@ -48,13 +56,7 @@
           policy, PANDORA achieves state-of-the-art performance in the ROBOPIANIST environment, significantly 
           outperforming baselines in both precision and expressiveness. Ablation studies validate the critical 
           contributions of diffusion-based denoising and LLM-driven semantic feedback in enhancing robotic musicianship.</p>
-        <div class="buttons">
-            <a href="#" class="btn">Read Paper</a>
-            <a href="#" class="btn">GitHub Repo</a>
-        </div>
     </section>
-
-    
 
     <section class="results">
         <h2>Results & Performance</h2>
