@@ -8,6 +8,13 @@ body {
     text-align: center;
 }
 
+/* 主容器，设置最大宽度并居中 */
+.container {
+    max-width: 1200px; /* 根据需要调整最大宽度 */
+    margin: 0 auto;
+    padding: 0 20px; /* 为小屏幕提供左右内边距 */
+}
+
 /* Header Logo */
 .header-container {
     display: flex;
@@ -17,7 +24,7 @@ body {
 }
 
 .header-container img {
-    height: 50px; /* 缩小 Logo */
+    height: 50px; /* 调整 Logo 大小 */
     margin: 0 15px;
 }
 
@@ -39,7 +46,7 @@ h1 {
     font-size: 48px;
     font-weight: bold;
     margin-top: 5px;
-    margin-bottom: 10px; /* 增加标题与副标题之间的间距 */
+    margin-bottom: 10px;
 }
 
 /* 副标题 */
@@ -48,7 +55,7 @@ h2 {
     font-weight: normal;
     color: #777;
     margin-top: 5px;
-    margin-bottom: 8px; /* 调整与作者名的间距 */
+    margin-bottom: 8px;
 }
 
 /* 作者名字 */
@@ -61,13 +68,13 @@ h2 {
 
 /* Pipeline 图片 */
 .pipeline {
-    max-width: 900px;
-    margin: 20px auto; /* 调整间距 */
+    width: 100%;
+    margin: 20px auto;
     padding: 10px 0;
 }
 
 .pipeline-image {
-    width: 85%;
+    width: 100%;
     max-width: 800px;
     border-radius: 8px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
@@ -75,8 +82,8 @@ h2 {
 
 /* 交互按钮 */
 .buttons {
-    margin-top: 20px; /* 增加 Pipeline 图片与按钮之间的间距 */
-    margin-bottom: 30px; /* 增加按钮与正文之间的间距 */
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .btn {
@@ -95,15 +102,14 @@ h2 {
     background: #0056b3;
 }
 
-/* 文字内容调整，使两侧有更大留白 */
+/* 文字内容 */
 p {
     font-size: 18px;
-    line-height: 1.6; /* 增加行距，提升可读性 */
+    line-height: 1.6;
     color: #666;
     text-align: justify;
-    max-width: 75%; /* 适当缩小文本区域 */
     margin: 0 auto;
-    padding: 15px 0; /* 增加段落间距 */
+    padding: 15px 0;
 }
 
 /* 页脚 */
@@ -111,7 +117,24 @@ footer {
     background: black;
     color: white;
     padding: 15px;
-    margin-top: 30px; /* 适当调整页脚的间距 */
+    margin-top: 30px;
     font-size: 16px;
     text-align: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .btn {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+    p {
+        font-size: 16px;
+    }
 }
