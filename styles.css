@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white; /* 页面底色变为白色 */
+    background-color: white !important; /* 强制设为白色 */
     color: #333;
     text-align: center;
 }
