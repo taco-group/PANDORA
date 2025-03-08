@@ -22,12 +22,20 @@
       <h2>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h2>
     </header>
 
-    <!-- 新增 Pipeline 版块 -->
-    <section class="pipeline">
-        <div class="image-container">
-            <img src="Pipeline.png" alt="PANDORA Pipeline" class="pipeline-image">
-        </div>
-    </section>
+    <section class="method">
+      <h2>Methodology</h2>
+      <div class="image-container">
+          <img src="Pipeline.png" alt="PANDORA Pipeline" class="image">
+      </div>
+      <p>
+          The pipeline begins with the robot state \(s_t\) and goal state \(g_t\) that condition a U-Net (via FiLM)
+          to iteratively denoise an initial noisy action \(x_t\) into \(x_0\) using DDIM.
+          The denoised action \(x_0\) is then added to the IK solver’s output \(q\)
+          (residual combination) to form the final action, which is executed in MuJoCo.
+          An Oracle Reward module, driven by a large language model, evaluates the performance
+          based on style and accuracy.
+      </p>
+  </section>
 
     <section class="intro">
         <h2>Abstract</h2>
@@ -47,20 +55,7 @@
         </div>
     </section>
 
-    <section class="method">
-        <h2>Methodology</h2>
-        <div class="image-container">
-            <img src="Pipeline.png" alt="PANDORA Pipeline" class="image">
-        </div>
-        <p>
-            The pipeline begins with the robot state \(s_t\) and goal state \(g_t\) that condition a U-Net (via FiLM)
-            to iteratively denoise an initial noisy action \(x_t\) into \(x_0\) using DDIM.
-            The denoised action \(x_0\) is then added to the IK solver’s output \(q\)
-            (residual combination) to form the final action, which is executed in MuJoCo.
-            An Oracle Reward module, driven by a large language model, evaluates the performance
-            based on style and accuracy.
-        </p>
-    </section>
+    
 
     <section class="results">
         <h2>Results & Performance</h2>
