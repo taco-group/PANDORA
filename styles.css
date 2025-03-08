@@ -125,3 +125,26 @@ footer {
     font-size: 18px;
     text-align: center;
 }
+/* Demo 版块样式 */
+.demo {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: none;
+    text-align: center;
+}
+
+/* 让视频保持合适的大小 */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.video-container video {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
