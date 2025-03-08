@@ -25,7 +25,7 @@ body {
 header {
     background: none;
     color: black;
-    padding: 10px 0; /* 让标题与 Logo 之间的间距更合理 */
+    padding: 15px 0;
     font-size: 20px;
     font-weight: bold;
     display: flex;
@@ -36,19 +36,19 @@ header {
 
 /* PANDORA 标题 */
 h1 {
-    font-size: 48px; /* 缩小标题 */
+    font-size: 48px;
     font-weight: bold;
-    margin-top: 2px; /* 调整与 Logo 之间的间距 */
-    margin-bottom: 8px; /* 让标题与副标题的间距缩小 */
+    margin-top: 5px;
+    margin-bottom: 10px; /* 增加标题与副标题之间的间距 */
 }
 
 /* 副标题 */
 h2 {
-    font-size: 24px; /* 缩小副标题 */
+    font-size: 24px;
     font-weight: normal;
     color: #777;
     margin-top: 5px;
-    margin-bottom: 5px; /* 让副标题与作者名更贴近 */
+    margin-bottom: 8px; /* 调整与作者名的间距 */
 }
 
 /* 作者名字 */
@@ -62,12 +62,12 @@ h2 {
 /* Pipeline 图片 */
 .pipeline {
     max-width: 900px;
-    margin: 15px auto; /* 适当调整图片的间距 */
-    padding: 5px;
+    margin: 20px auto; /* 调整间距 */
+    padding: 10px 0;
 }
 
 .pipeline-image {
-    width: 85%; /* 缩小图片 */
+    width: 85%;
     max-width: 800px;
     border-radius: 8px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
@@ -75,17 +75,18 @@ h2 {
 
 /* 交互按钮 */
 .buttons {
-    margin: 10px auto 20px auto; /* 调整按钮间距 */
+    margin-top: 20px; /* 增加 Pipeline 图片与按钮之间的间距 */
+    margin-bottom: 30px; /* 增加按钮与正文之间的间距 */
 }
 
 .btn {
     text-decoration: none;
-    padding: 8px 16px; /* 缩小按钮 */
-    font-size: 16px; /* 调整字体 */
+    padding: 10px 20px;
+    font-size: 18px;
     color: white;
     background: #007bff;
     border-radius: 5px;
-    margin: 0 5px;
+    margin: 0 10px;
     display: inline-block;
     transition: 0.3s;
 }
@@ -96,21 +97,21 @@ h2 {
 
 /* 文字内容调整，使两侧有更大留白 */
 p {
-    font-size: 18px; /* 调整字体大小 */
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.6; /* 增加行距，提升可读性 */
     color: #666;
     text-align: justify;
-    max-width: 10%; /* 限制段落宽度，避免太靠近页面边缘 */
-    margin: 0 auto; /* 居中对齐 */
-    padding: 10px 0; /* 让段落之间的间距更舒适 */
+    max-width: 75%; /* 适当缩小文本区域 */
+    margin: 0 auto;
+    padding: 15px 0; /* 增加段落间距 */
 }
 
 /* 页脚 */
 footer {
     background: black;
     color: white;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 15px;
+    margin-top: 30px; /* 适当调整页脚的间距 */
     font-size: 16px;
     text-align: center;
 }
