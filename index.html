@@ -16,18 +16,25 @@
     </div>
 
     <header>
-        <div class="title-container">
-            <h1>PANDORA</h1>
-        </div>
-        <h2>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h2>
+      <div class="title-container">
+          <h1>PANDORA</h1>
+      </div>
+      <h2>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h2>
     </header>
 
-    <!-- 让 Pipeline 图片直接放在标题下面 -->
-    <section class="pipeline">
-        <div class="image-container">
-            <img src="Pipeline.png" alt="PANDORA Pipeline" class="pipeline-image">
-        </div>
-    </section>
+    <section class="method">
+      <div class="image-container">
+          <img src="Pipeline.png" alt="PANDORA Pipeline" class="image">
+      </div>
+      <p>
+          The pipeline begins with the robot state \(s_t\) and goal state \(g_t\) that condition a U-Net (via FiLM)
+          to iteratively denoise an initial noisy action \(x_t\) into \(x_0\) using DDIM.
+          The denoised action \(x_0\) is then added to the IK solver’s output \(q\)
+          (residual combination) to form the final action, which is executed in MuJoCo.
+          An Oracle Reward module, driven by a large language model, evaluates the performance
+          based on style and accuracy.
+      </p>
+  </section>
 
     <section class="intro">
         <h2>Abstract</h2>
@@ -47,6 +54,8 @@
         </div>
     </section>
 
+    
+
     <section class="results">
         <h2>Results & Performance</h2>
         <p>PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
@@ -56,14 +65,14 @@
     </section>
 
     <section class="demo">
-        <h2>Demo</h2>
-        <p>Watch the demonstration of PANDORA's robotic piano playing in action.</p>
-        <div class="video-container">
-            <video controls>
-                <source src="Viva_ours.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+      <h2>Demo</h2>
+      <p>Watch the demonstration of PANDORA's robotic piano playing in action.</p>
+      <div class="video-container">
+          <video controls>
+              <source src="Viva_ours.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
     </section>
 
     <footer>
