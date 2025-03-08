@@ -14,13 +14,13 @@
     <img src="school.png" alt="School Logo" class="header-logo" style="height: 50px; margin-right: 20px;">
     <img src="TACO-Group.png" alt="Lab Logo" class="header-logo" style="height: 50px;">
   </div>
-    <header style="background: none; box-shadow: none; margin-top: -20px;">
-      <h1>PANDORA <img src="icon.webp" alt="PANDORA Logo" class="logo"></h1>
+    <header style="background: none; box-shadow: none; text-align: center; margin-top: -10px;">
+      <h1 style="color: black; font-size: 36px; font-weight: bold;">PANDORA <img src="icon.webp" alt="PANDORA Logo" class="logo" style="height: 30px; vertical-align: middle;"></h1>
     </header>
     
-    <section class="intro section">
-        <h2>Abstract</h2>
-        <p class="text-justify">We present PANDORA, a novel diffusion-based
+    <section class="intro section" style="background: none; padding: 40px 10%; text-align: justify;">
+        <h2 style="text-align: center; font-weight: bold;">Abstract</h2>
+        <p>We present PANDORA, a novel diffusion-based
           policy learning framework designed specifically for dexterous
           robotic piano performance. Our approach employs a condi-
           tional U-Net architecture enhanced with FiLM-based global
@@ -38,20 +38,20 @@
           cision and expressiveness. Ablation studies validate the critical
           contributions of diffusion-based denoising and LLM-driven
           semantic feedback in enhancing robotic musicianship.</p>
-        <div class="buttons">
+        <div class="buttons" style="text-align: center; margin-top: 20px;">
             <a href="#" class="btn">Read Paper</a>
             <a href="#" class="btn">GitHub Repo</a>
         </div>
     </section>
     
-    <hr class="section-divider">
+    <hr class="section-divider" style="border: none; height: 1px; background: #ccc; margin: 40px 10%;">
     
-    <section class="method section">
-        <h2>Methodology</h2>
-        <div class="image-container">
-            <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image">
+    <section class="method section" style="background: none; padding: 40px 10%; text-align: justify;">
+        <h2 style="text-align: center; font-weight: bold;">Methodology</h2>
+        <div class="image-container" style="text-align: center;">
+            <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image" style="max-width: 80%; height: auto;">
         </div>
-        <p class="text-justify">
+        <p>
             The pipeline begins with the robot state \(s_t\) and goal state \(g_t\) that condition a U-Net (via FiLM)
             to iteratively denoise an initial noisy action \(x_t\) into \(x_0\) using DDIM.
             The denoised action \(x_0\) is then added to the IK solver’s output \(q\)
@@ -61,17 +61,17 @@
         </p>
     </section>
     
-    <hr class="section-divider">
+    <hr class="section-divider" style="border: none; height: 1px; background: #ccc; margin: 40px 10%;">
     
-    <section class="results section">
-        <h2>Results & Performance</h2>
-        <p class="text-justify">PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
-        <div class="image-container">
-            <img src="Table1.png" alt="Results Graph" class="image">
+    <section class="results section" style="background: none; padding: 40px 10%; text-align: justify;">
+        <h2 style="text-align: center; font-weight: bold;">Results & Performance</h2>
+        <p>PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
+        <div class="image-container" style="text-align: center;">
+            <img src="Table1.png" alt="Results Graph" class="image" style="max-width: 80%; height: auto;">
         </div>
     </section>
     
-    <footer>
+    <footer style="text-align: center; padding: 20px; font-size: 16px;">
         Developed by <strong>TACO-Group</strong> | 2025
     </footer>
 </body>
