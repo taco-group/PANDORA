@@ -38,7 +38,7 @@ header {
 h1 {
     font-size: 48px; /* 缩小标题 */
     font-weight: bold;
-    margin-top: 5px; /* 调整与 Logo 之间的间距 */
+    margin-top: 2px; /* 调整与 Logo 之间的间距 */
     margin-bottom: 8px; /* 让标题与副标题的间距缩小 */
 }
 
@@ -100,7 +100,7 @@ p {
     line-height: 1.5;
     color: #666;
     text-align: justify;
-    max-width: 70%; /* 限制段落宽度，避免太靠近页面边缘 */
+    max-width: 10%; /* 限制段落宽度，避免太靠近页面边缘 */
     margin: 0 auto; /* 居中对齐 */
     padding: 10px 0; /* 让段落之间的间距更舒适 */
 }
