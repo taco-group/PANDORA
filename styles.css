@@ -8,6 +8,13 @@ body {
     text-align: center;
 }
 
+/* 限制页面内容最大宽度 */
+.container {
+    max-width: 1200px;  /* 限制最大宽度 */
+    margin: 0 auto;     /* 居中 */
+    padding: 0 40px;    /* 左右增加 40px 内边距，避免贴边 */
+}
+
 /* Header Logo */
 .header-container {
     display: flex;
@@ -17,7 +24,7 @@ body {
 }
 
 .header-container img {
-    height: 50px; /* 缩小 Logo */
+    height: 50px;
     margin: 0 15px;
 }
 
@@ -26,43 +33,36 @@ header {
     background: none;
     color: black;
     padding: 15px 0;
-    font-size: 20px;
-    font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* PANDORA 标题 */
+/* 标题 */
 h1 {
     font-size: 48px;
     font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: 10px; /* 增加标题与副标题之间的间距 */
+    margin-bottom: 10px;
 }
 
-/* 副标题 */
 h2 {
     font-size: 24px;
-    font-weight: normal;
     color: #777;
-    margin-top: 5px;
-    margin-bottom: 8px; /* 调整与作者名的间距 */
+    margin-bottom: 8px;
 }
 
 /* 作者名字 */
 .authors {
     font-size: 18px;
     color: #555;
-    margin-top: 5px;
     font-style: italic;
 }
 
 /* Pipeline 图片 */
 .pipeline {
     max-width: 900px;
-    margin: 20px auto; /* 调整间距 */
+    margin: 20px auto;
     padding: 10px 0;
 }
 
@@ -75,8 +75,8 @@ h2 {
 
 /* 交互按钮 */
 .buttons {
-    margin-top: 20px; /* 增加 Pipeline 图片与按钮之间的间距 */
-    margin-bottom: 30px; /* 增加按钮与正文之间的间距 */
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .btn {
@@ -95,25 +95,15 @@ h2 {
     background: #0056b3;
 }
 
-/* 文字内容调整，使两侧有更大留白 */
+/* 文字排版 */
 p {
     font-size: 18px;
-    line-height: 1.6; /* 增加行距，提升可读性 */
+    line-height: 1.6;
     color: #666;
     text-align: justify;
-    max-width: 75%; /* 适当缩小文本区域 */
+    max-width: 900px;
     margin: 0 auto;
-    padding: 15px 0; /* 增加段落间距 */
-}
-
-/* 页脚 */
-footer {
-    background: black;
-    color: white;
-    padding: 15px;
-    margin-top: 30px; /* 适当调整页脚的间距 */
-    font-size: 16px;
-    text-align: center;
+    padding: 10px 20px;
 }
 
 /* Demo 版块 */
@@ -127,8 +117,8 @@ footer {
 /* 视频网格布局 */
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 每行固定 4 个 */
-    gap: 20px; /* 视频之间的间距 */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
@@ -144,33 +134,42 @@ footer {
 /* 视频样式 */
 .video-item video {
     width: 100%;
-    max-width: 250px; /* 控制视频最大宽度 */
+    max-width: 250px;
     border-radius: 10px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* 视频标题样式 */
+/* 视频标题 */
 .video-title {
     font-size: 16px;
     margin-top: 5px;
     color: #444;
 }
 
-/* 响应式布局 - 当屏幕变小时调整视频排列 */
+/* 响应式布局 */
 @media (max-width: 1024px) {
     .video-grid {
-        grid-template-columns: repeat(3, 1fr); /* 屏幕变小时，每行 3 个 */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .video-grid {
-        grid-template-columns: repeat(2, 1fr); /* 屏幕更小时，每行 2 个 */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .video-grid {
-        grid-template-columns: repeat(1, 1fr); /* 手机端，每行 1 个 */
+        grid-template-columns: repeat(1, 1fr);
     }
+}
+
+/* 页脚 */
+footer {
+    background: black;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
 }
