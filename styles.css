@@ -25,7 +25,7 @@ body {
 header {
     background: none;
     color: black;
-    padding: 15px 0; /* 让标题更紧凑 */
+    padding: 10px 0; /* 让标题与 Logo 之间的间距更合理 */
     font-size: 20px;
     font-weight: bold;
     display: flex;
@@ -38,7 +38,8 @@ header {
 h1 {
     font-size: 48px; /* 缩小标题 */
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-top: 5px; /* 调整与 Logo 之间的间距 */
+    margin-bottom: 8px; /* 让标题与副标题的间距缩小 */
 }
 
 /* 副标题 */
@@ -47,6 +48,7 @@ h2 {
     font-weight: normal;
     color: #777;
     margin-top: 5px;
+    margin-bottom: 5px; /* 让副标题与作者名更贴近 */
 }
 
 /* 作者名字 */
@@ -59,8 +61,8 @@ h2 {
 
 /* Pipeline 图片 */
 .pipeline {
-    max-width: 900px; /* 让图片区域更窄 */
-    margin: 10px auto;
+    max-width: 900px;
+    margin: 15px auto; /* 适当调整图片的间距 */
     padding: 5px;
 }
 
@@ -92,14 +94,15 @@ h2 {
     background: #0056b3;
 }
 
-/* 文本段落 */
+/* 文字内容调整，使两侧有更大留白 */
 p {
-    font-size: 18px; /* 缩小文本 */
-    line-height: 1.4;
+    font-size: 18px; /* 调整字体大小 */
+    line-height: 1.5;
     color: #666;
     text-align: justify;
-    max-width: 85%;
-    margin: 0 auto;
+    max-width: 70%; /* 限制段落宽度，避免太靠近页面边缘 */
+    margin: 0 auto; /* 居中对齐 */
+    padding: 10px 0; /* 让段落之间的间距更舒适 */
 }
 
 /* 页脚 */
