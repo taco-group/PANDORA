@@ -1,8 +1,9 @@
+/* 全局样式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: white; /* 页面底色变为白色 */
     color: #333;
     text-align: center;
 }
@@ -42,7 +43,7 @@ body {
 header {
     background: none;
     color: black;
-    padding: 20px 0;
+    padding: 30px 0; /* 增加 padding 让标题有更多空间 */
     font-size: 24px;
     font-weight: bold;
     display: flex;
@@ -52,16 +53,19 @@ header {
     text-align: center;
 }
 
+/* PANDORA 标题变大 */
 h1 {
-    font-size: 42px;
+    font-size: 60px; /* 让 PANDORA 变大 */
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 30px; /* 增加和副标题的间距 */
 }
 
+/* 副标题变灰色并增加间距 */
 h2 {
     font-size: 28px;
-    font-weight: bold;
-    margin-top: 5px;
+    font-weight: normal;
+    color: #777; /* 变成灰色 */
+    margin-top: 10px; /* 增加间距，使它和 PANDORA 更远 */
 }
 
 /* 取消白色背景 */
@@ -125,6 +129,7 @@ footer {
     font-size: 18px;
     text-align: center;
 }
+
 /* Demo 版块样式 */
 .demo {
     max-width: 1100px;
