@@ -9,53 +9,39 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
 </head>
-<body style="background: #f8f9fa; font-family: Arial, sans-serif; color: #333;">
-  <div class="header-container" style="display: flex; justify-content: center; align-items: center; padding: 10px 0; gap: 30px; background: none;">
-    <img src="school.png" alt="School Logo" class="header-logo" style="height: 60px; background: none; border: none;">
-    <img src="TACO-Group.png" alt="Lab Logo" class="header-logo" style="height: 60px; background: none; border: none;">
-  </div>
-      <header style="background: none; box-shadow: none; text-align: center; margin-top: -10px; position: relative;">
-        <h1 style="color: black; font-size: 42px; font-weight: bold; margin-bottom: 5px; display: inline-block; position: relative;">
-            PANDORA <sup><img src="icon.webp" alt="PANDORA Logo" class="logo" style="height: 28px; vertical-align: text-top; margin-left: 5px;"></sup>:
-        </h1>
-        <h2 style="color: black; font-size: 28px; font-weight: bold; margin-top: 5px; margin-bottom: 10px; line-height: 1.4;">
-            Diffusion Policy Learning for Dexterous Robotic Piano Playing
-        </h2>
+<body>
+    <div class="header-container">
+        <img src="school.png" alt="School Logo" class="header-logo">
+        <img src="TACO-Group.png" alt="Lab Logo" class="header-logo">
+    </div>
+
+    <header>
+        <h1>PANDORA <sup><img src="icon.webp" alt="PANDORA Logo" class="logo"></sup>:</h1>
+        <h2>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h2>
     </header>
 
-    
-    <section class="intro section" style="padding: 40px 8%; max-width: 85%; text-align: justify; font-size: 20px; line-height: 1.6;">
-        <h2 style="text-align: center; font-size: 32px; font-weight: bold;">Abstract</h2>
-        <p>We present PANDORA, a novel diffusion-based
-          policy learning framework designed specifically for dexterous
-          robotic piano performance. Our approach employs a condi-
-          tional U-Net architecture enhanced with FiLM-based global
-          conditioning, which iteratively denoises noisy action sequences
-          into smooth, high-dimensional trajectories. To achieve precise
-          key execution coupled with expressive musical performance, we
-          design a composite reward function that integrates task-specific
-          accuracy, audio fidelity, and high-level semantic feedback from
-          a large language model (LLM) oracle. The LLM oracle as-
-          sesses musical expressiveness and stylistic nuances, enabling dy-
-          namic, hand-specific reward adjustments. Further augmented
-          by a residual inverse-kinematics refinement policy, PANDORA
-          achieves state-of-the-art performance in the ROBOPIANIST
-          environment, significantly outperforming baselines in both pre-
-          cision and expressiveness. Ablation studies validate the critical
-          contributions of diffusion-based denoising and LLM-driven
-          semantic feedback in enhancing robotic musicianship.</p>
-        <div class="buttons" style="text-align: center; margin-top: 20px;">
+    <section class="intro">
+        <h2>Abstract</h2>
+        <p>We present PANDORA, a novel diffusion-based policy learning framework designed specifically for dexterous
+          robotic piano performance. Our approach employs a conditional U-Net architecture enhanced with FiLM-based global
+          conditioning, which iteratively denoises noisy action sequences into smooth, high-dimensional trajectories. 
+          To achieve precise key execution coupled with expressive musical performance, we design a composite reward 
+          function that integrates task-specific accuracy, audio fidelity, and high-level semantic feedback from a large 
+          language model (LLM) oracle. The LLM oracle assesses musical expressiveness and stylistic nuances, enabling 
+          dynamic, hand-specific reward adjustments. Further augmented by a residual inverse-kinematics refinement 
+          policy, PANDORA achieves state-of-the-art performance in the ROBOPIANIST environment, significantly 
+          outperforming baselines in both precision and expressiveness. Ablation studies validate the critical 
+          contributions of diffusion-based denoising and LLM-driven semantic feedback in enhancing robotic musicianship.</p>
+        <div class="buttons">
             <a href="#" class="btn">Read Paper</a>
             <a href="#" class="btn">GitHub Repo</a>
         </div>
     </section>
-    
-    <hr class="section-divider" style="border: none; height: 1px; background: #ddd; margin: 50px 12%;">
-    
-    <section class="method section" style="padding: 40px 12%; text-align: justify; background: none; box-shadow: none; font-size: 22px; line-height: 1.8;">
-        <h2 style="text-align: center; font-size: 32px; font-weight: bold;">Methodology</h2>
-        <div class="image-container" style="text-align: center;">
-            <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image" style="max-width: 90%; height: auto;">
+
+    <section class="method">
+        <h2>Methodology</h2>
+        <div class="image-container">
+            <img src="Pipeline_PANDORA.jpg" alt="PANDORA Pipeline" class="image">
         </div>
         <p>
             The pipeline begins with the robot state \(s_t\) and goal state \(g_t\) that condition a U-Net (via FiLM)
@@ -66,18 +52,16 @@
             based on style and accuracy.
         </p>
     </section>
-    
-    <hr class="section-divider" style="border: none; height: 1px; background: #ddd; margin: 50px 12%;">
-    
-    <section class="results section" style="padding: 40px 12%; text-align: justify; background: none; box-shadow: none; font-size: 22px; line-height: 1.8;">
-        <h2 style="text-align: center; font-size: 32px; font-weight: bold;">Results & Performance</h2>
+
+    <section class="results">
+        <h2>Results & Performance</h2>
         <p>PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
-        <div class="image-container" style="text-align: center;">
-            <img src="Table1.png" alt="Results Graph" class="image" style="max-width: 90%; height: auto;">
+        <div class="image-container">
+            <img src="Table1.png" alt="Results Graph" class="image">
         </div>
     </section>
-    
-    <footer style="text-align: center; padding: 20px; font-size: 20px;">
+
+    <footer>
         Developed by <strong>TACO-Group</strong> | 2025
     </footer>
 </body>

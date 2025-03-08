@@ -7,73 +7,77 @@ body {
     text-align: center;
 }
 
+/* Header Logo */
 .header-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    background-color: white;
+    padding: 15px 0;
+    background-color: transparent;
 }
 
 .header-container img {
-    height: 50px;
-    margin: 0 15px;
+    height: 80px; /* 放大 Logo */
+    margin: 0 30px; /* 扩展间距 */
 }
 
+/* 标题部分 */
 header {
-    background: linear-gradient(to right, #000, #444);
-    color: white;
+    background: none;
+    color: black;
     padding: 20px 0;
     font-size: 24px;
     font-weight: bold;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.logo {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-}
-
-section {
-    max-width: 1100px; /* 让内容更宽 */
-    margin: 30px auto; /* 让内容更紧凑 */
-    padding: 30px; /* 适当减少内边距 */
-    background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
+h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 h2 {
     font-size: 28px;
-    margin-bottom: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* 取消白色背景 */
+section {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    background: none; /* 取消白色背景 */
+    box-shadow: none; /* 取消阴影 */
     text-align: center;
 }
 
+/* 让文本更贴近两侧 */
 p {
-    font-size: 20px; /* 字体稍微增大 */
-    line-height: 1.5; /* 让段落更加紧凑 */
+    font-size: 20px;
+    line-height: 1.5;
     color: #666;
-    text-align: justify; /* 让文本左右对齐 */
-    max-width: 95%; /* 让文本区域更宽，减少空白 */
-    margin: 0 auto; /* 居中 */
+    text-align: justify;
+    max-width: 95%;
+    margin: 0 auto;
 }
 
+/* 图片样式 */
 .image {
-    width: 90%; /* 让图片填充更多空间 */
-    max-width: 800px; /* 适当限制图片最大宽度 */
+    width: 90%;
+    max-width: 800px;
     margin: 20px auto;
     display: block;
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* 按钮样式 */
 .buttons {
     margin-top: 20px;
     text-align: center;
@@ -95,6 +99,7 @@ p {
     background: #0056b3;
 }
 
+/* 页脚 */
 footer {
     background: black;
     color: white;
