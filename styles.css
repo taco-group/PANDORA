@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white !important; /* 强制设为白色 */
+    background-color: white;
     color: #333;
     text-align: center;
 }
@@ -13,82 +13,77 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 0;
-    background-color: transparent;
+    padding: 10px 0;
 }
 
 .header-container img {
-    height: 80px; /* 放大 Logo */
-    margin: 0 30px; /* 扩展间距 */
+    height: 50px; /* 缩小 Logo */
+    margin: 0 15px;
 }
 
 /* 标题部分 */
 header {
     background: none;
     color: black;
-    padding: 30px 0;
-    font-size: 24px;
+    padding: 15px 0; /* 让标题更紧凑 */
+    font-size: 20px;
     font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 /* PANDORA 标题 */
 h1 {
-    font-size: 60px;
+    font-size: 48px; /* 缩小标题 */
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* 副标题 */
 h2 {
-    font-size: 28px;
+    font-size: 24px; /* 缩小副标题 */
     font-weight: normal;
     color: #777;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 /* 作者名字 */
 .authors {
-    font-size: 22px;
+    font-size: 18px;
     color: #555;
     margin-top: 5px;
     font-style: italic;
 }
 
-/* 让 Pipeline 图片紧贴标题 */
+/* Pipeline 图片 */
 .pipeline {
-    max-width: 1100px;
-    margin: 20px auto 10px auto; /* 上下间距调整 */
-    padding: 10px;
-    text-align: center;
+    max-width: 900px; /* 让图片区域更窄 */
+    margin: 10px auto;
+    padding: 5px;
 }
 
-/* Pipeline 图片样式 */
 .pipeline-image {
-    width: 90%;
-    max-width: 1000px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    width: 85%; /* 缩小图片 */
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* 交互按钮样式 */
+/* 交互按钮 */
 .buttons {
-    margin: 10px auto 30px auto; /* 让按钮和 Pipeline 图片有合理间距 */
-    text-align: center;
+    margin: 10px auto 20px auto; /* 调整按钮间距 */
 }
 
 .btn {
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 8px 16px; /* 缩小按钮 */
+    font-size: 16px; /* 调整字体 */
     color: white;
     background: #007bff;
     border-radius: 5px;
-    margin: 0 10px;
+    margin: 0 5px;
     display: inline-block;
     transition: 0.3s;
 }
@@ -97,13 +92,13 @@ h2 {
     background: #0056b3;
 }
 
-/* 让文本更贴近两侧 */
+/* 文本段落 */
 p {
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: 18px; /* 缩小文本 */
+    line-height: 1.4;
     color: #666;
     text-align: justify;
-    max-width: 95%;
+    max-width: 85%;
     margin: 0 auto;
 }
 
@@ -111,8 +106,8 @@ p {
 footer {
     background: black;
     color: white;
-    padding: 15px;
-    margin-top: 40px;
-    font-size: 18px;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
     text-align: center;
 }
