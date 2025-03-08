@@ -22,12 +22,6 @@ body {
     margin: 0 30px; /* 扩展间距 */
 }
 
-/* 让图标放在 PANDORA 右上角 */
-.title-container {
-    position: relative;
-    display: inline-block;
-}
-
 /* 标题部分 */
 header {
     background: none;
@@ -42,19 +36,27 @@ header {
     text-align: center;
 }
 
-/* PANDORA 标题变大 */
+/* PANDORA 标题 */
 h1 {
     font-size: 60px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* 副标题变灰色并增加间距 */
+/* 副标题 */
 h2 {
     font-size: 28px;
     font-weight: normal;
     color: #777;
     margin-top: 10px;
+}
+
+/* 作者名字 */
+.authors {
+    font-size: 22px;
+    color: #555;
+    margin-top: 5px;
+    font-style: italic;
 }
 
 /* 让 Pipeline 图片紧贴标题 */
