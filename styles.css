@@ -21,6 +21,23 @@ body {
     margin: 0 30px; /* 扩展间距 */
 }
 
+/* 让图标放在 PANDORA 右上角 */
+.title-container {
+    position: relative;
+    display: inline-block; /* 让内容不会换行 */
+}
+
+.icon-container {
+    position: absolute;
+    top: -8px; /* 上移到右上角 */
+    right: -12px; /* 向右调整 */
+}
+
+.logo {
+    width: 18px; /* 缩小图标 */
+    height: auto;
+}
+
 /* 标题部分 */
 header {
     background: none;
@@ -32,7 +49,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    text-align: center;
 }
 
 h1 {
