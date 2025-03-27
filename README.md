@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="icon.png" width="500px" />
+  <img src="icon.png" width="50px" />
 
   <h1>PANDORA</h1>
   <h3>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h3>
@@ -41,7 +41,7 @@ Combined with **residual inverse-kinematics refinement**, PANDORA achieves **sta
 </div>
 
 <p align="center">
-  <i>Figure 1. Overview of PANDORA’s diffusion-based action generation pipeline and LLM-driven reward evaluation.</i>
+  <i>Overview of PANDORA’s diffusion-based action generation pipeline and LLM-driven reward evaluation.</i>
 </p>
 
 ---
