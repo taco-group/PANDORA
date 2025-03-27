@@ -1,26 +1,54 @@
-# 🎹 PANDORA – Model Resources (ckpts & trajectories)
+<div align="center">
+  <img src="Pipeline_PANDORA.jpg" width="500px" />
 
-> **Diffusion Policy Learning for Dexterous Robotic Piano Playing**  
-> Authors: Yanjia Huang, Renjie Li, Zhengzhong Tu  
-> [[📄 arXiv Paper]](https://arxiv.org/abs/2503.14545)  
-> [[🌐 Project Website]](https://taco-group.github.io/PANDORA)
+  <h1>PANDORA</h1>
+  <h3>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h3>
+
+  <p>
+    <a href="https://taco-group.github.io/PANDORA/" target="_blank">
+      <img src="https://img.shields.io/badge/Project%20Page-Live-blue?logo=github" />
+    </a>
+    <a href="https://github.com/taco-group/PANDORA" target="_blank">
+      <img src="https://img.shields.io/badge/Code-GitHub-black?logo=github" />
+    </a>
+    <a href="https://arxiv.org/abs/2503.14545" target="_blank">
+      <img src="https://img.shields.io/badge/arXiv-2503.14545-b31b1b.svg?logo=arxiv" />
+    </a>
+    <a href="https://opensource.org/licenses/MIT" target="_blank">
+      <img src="https://img.shields.io/badge/License-MIT-blue.svg?logo=open-source-initiative" />
+    </a>
+  </p>
+</div>
 
 ---
 
-## 🧠 Project Overview
+## 🧠 Abstract
 
-PANDORA is a diffusion-based policy learning framework for robotic piano performance.  
-It generates smooth, expressive joint trajectories conditioned on goal state and musical intent, and is guided by LLM-based semantic feedback.
+**PANDORA** is a novel diffusion-based policy learning framework for **dexterous robotic piano performance**.  
+It leverages a **conditional U-Net with FiLM conditioning** to iteratively denoise noisy action sequences into smooth, high-dimensional trajectories.
 
-For code and demos, see the `website` branch or visit the project site:
+To enhance expressiveness and musical fidelity, we introduce a **composite reward function** that integrates task-specific objectives with high-level feedback from a **Large Language Model (LLM)** oracle.  
+This oracle assesses performance **style** and **semantic correctness**, enabling dynamic, hand-specific reward adjustment.
 
-👉 [https://taco-group.github.io/PANDORA](https://taco-group.github.io/PANDORA)
+Combined with **residual inverse-kinematics refinement**, PANDORA achieves **state-of-the-art performance** in the ROBOPIANIST environment, significantly outperforming baseline methods.
 
 ---
 
-## 📚 Citation
+## 🎹 Pipeline Overview
 
-If you use this work, please cite:
+<div align="center">
+  <img src="Pipeline.png" width="720px" />
+</div>
+
+<p align="center">
+  <i>Figure 1. Overview of PANDORA’s diffusion-based action generation pipeline and LLM-driven reward evaluation.</i>
+</p>
+
+---
+
+## 📖 Citation
+
+If you find this work useful, please consider citing us:
 
 ```bibtex
 @misc{huang2025pandoradiffusionpolicylearning,
