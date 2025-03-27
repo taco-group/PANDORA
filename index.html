@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PANDORA: Diffusion Policy Learning for Dexterous Robotic Piano Playing</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 新增样式 */
+        .intro-video {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .intro-video video {
+            max-width: 90%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .pipeline-image {
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .video-wrapper {
+            text-align: center;
+        }
+    </style>
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
@@ -24,9 +47,15 @@
             <p class="authors">Yanjia Huang, Renjie Li, Zhengzhong Tu</p>
         </header>
 
-        <!-- Pipeline 图片 -->
-        <section class="pipeline">
-            <img src="Pipeline.png" alt="PANDORA Pipeline" class="pipeline-image">
+        <!-- Intro Video -->
+        <section class="intro-video">
+            <h2>Overview Video</h2>
+            <div class="video-wrapper">
+                <video controls width="720">
+                    <source src="overview.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </section>
 
         <!-- 交互按钮 -->
@@ -45,6 +74,11 @@
                 An Oracle Reward module, driven by a large language model, evaluates the performance
                 based on style and accuracy.
             </p>
+        </section>
+
+        <!-- Pipeline 图片（移动后的） -->
+        <section class="pipeline">
+            <img src="Pipeline.png" alt="PANDORA Pipeline" class="pipeline-image">
         </section>
 
         <!-- Abstract -->
