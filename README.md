@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="Pipeline_PANDORA.jpg" width="500px" />
+  <img src="icon.png" width="500px" />
 
   <h1>PANDORA</h1>
   <h3>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h3>
@@ -37,7 +37,7 @@ Combined with **residual inverse-kinematics refinement**, PANDORA achieves **sta
 ## 🎹 Pipeline Overview
 
 <div align="center">
-  <img src="Pipeline.png" width="720px" />
+  <img src="Pipeline_PANDORA.jpg" width="720px" />
 </div>
 
 <p align="center">
