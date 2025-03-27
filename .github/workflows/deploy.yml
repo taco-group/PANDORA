@@ -3,10 +3,12 @@ name: Deploy Website to GitHub Pages
 on:
   push:
     branches:
-      - main  # 每次 main 分支有变更，就重新部署网站
+      - main
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -21,7 +23,7 @@ jobs:
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .  # 部署当前目录的 index.html、资源等
+          path: .
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
