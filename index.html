@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANDORA: Diffusion Policy Learning for Dexterous Robotic Piano Playing</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 新增样式 */
+        .intro-video {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .intro-video video {
+            max-width: 90%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .pipeline-image {
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .video-wrapper {
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="header-container">
+            <img src="school.png" alt="School Logo" class="header-logo">
+            <img src="TACO-Group.png" alt="Lab Logo" class="header-logo">
+        </div>
+
+        <!-- 标题 -->
+        <header>
+            <h1>PANDORA</h1>
+            <h2>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h2>
+            <p class="authors">Yanjia Huang, Renjie Li, Zhengzhong Tu</p>
+        </header>
+
+        <!-- Intro Video (with poster, no heading) -->
+        <section class="intro-video">
+            <div class="video-wrapper">
+                <video controls width="720" poster="cover.png">
+                    <source src="Demo.MP4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+
+        <!-- 交互按钮 -->
+        <div class="buttons">
+            <a href="https://arxiv.org/pdf/2503.14545" class="btn" target="_blank">Read Paper</a>
+            <a href="https://github.com/taco-group/PANDORA" class="btn" target="_blank">GitHub Repo</a>
+        </div>
+
+        <!-- 方法介绍 -->
+        <section class="method">
+            <p>
+                The pipeline begins with the robot state \(s_t\) and goal state \(g_t\) that condition a U-Net (via FiLM)
+                to iteratively denoise an initial noisy action \(x_t\) into \(x_0\) using DDIM.
+                The denoised action \(x_0\) is then added to the IK solver’s output \(q\)
+                (residual combination) to form the final action, which is executed in MuJoCo.
+                An Oracle Reward module, driven by a large language model, evaluates the performance
+                based on style and accuracy.
+            </p>
+        </section>
+
+        <!-- Pipeline 图片（移动后的） -->
+        <section class="pipeline">
+            <img src="Pipeline.png" alt="PANDORA Pipeline" class="pipeline-image">
+        </section>
+
+        <!-- Abstract -->
+        <section class="intro">
+            <h2>Abstract</h2>
+            <p>
+                We present PANDORA, a novel diffusion-based policy learning framework designed specifically for dexterous
+                robotic piano performance. Our approach employs a conditional U-Net architecture enhanced with FiLM-based global
+                conditioning, which iteratively denoises noisy action sequences into smooth, high-dimensional trajectories. 
+                To achieve precise key execution coupled with expressive musical performance, we design a composite reward 
+                function that integrates task-specific accuracy, audio fidelity, and high-level semantic feedback from a large 
+                language model (LLM) oracle. The LLM oracle assesses musical expressiveness and stylistic nuances, enabling 
+                dynamic, hand-specific reward adjustments. Further augmented by a residual inverse-kinematics refinement 
+                policy, PANDORA achieves state-of-the-art performance in the ROBOPIANIST environment, significantly 
+                outperforming baselines in both precision and expressiveness. Ablation studies validate the critical 
+                contributions of diffusion-based denoising and LLM-driven semantic feedback in enhancing robotic musicianship.
+            </p>
+        </section>
+
+        <!-- 结果展示 -->
+        <section class="results">
+            <h2>Results & Performance</h2>
+            <p>PANDORA outperforms baselines in both precision and expressiveness within the ROBOPIANIST environment.</p>
+            <div class="image-container">
+                <img src="Table1.png" alt="Results Graph" class="image">
+            </div>
+        </section>
+
+        <!-- Demo 视频 -->
+        <section class="demo">
+            <h2>Demo</h2>
+            <p>Watch the demonstration of PANDORA's robotic piano playing in action.</p>
+            <div class="video-grid">
+                <div class="video-item">
+                    <video controls>
+                        <source src="Viva_ours.mp4" type="video/mp4">
+                    </video>
+                    <p class="video-title">PANDORA (Ours)</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="Viva_bs.mp4" type="video/mp4">
+                    </video>
+                    <p class="video-title">Baseline (PianoMime)</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="00001.mp4" type="video/mp4">
+                    </video>
+                    <p class="video-title">Viva La Vida by Coldplay</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="00001 (1).mp4" type="video/mp4">
+                    </video>
+                    <p class="video-title">Last Christmas by Wham!</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="00001 (2).mp4" type="video/mp4">
+                    </video>
+                    <p class="video-title">Adieu by Rammstein</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="00001 (3).mp4" type="video/mp4">
+                    </video>
+                    <p class="video-title">Lose Yourself by Eminem</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="00001 (4).mp4" type="video/mp4">
+                    </video>
+                    <p class="video-title">Arcade by Duncan Laurence</p>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="00001 (5).mp4" type="video/mp4">
+                    </video>
+                    <p class="video-title">Na Zare by Alliance</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        Developed by <strong>TACO-Group</strong> | 2025
+    </footer>
+</body>
+</html>
