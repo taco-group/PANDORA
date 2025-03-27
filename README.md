@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="icon.png" width="50px" />
+  <img src="icon.png" width="100px" />
 
   <h1>PANDORA</h1>
   <h3>Diffusion Policy Learning for Dexterous Robotic Piano Playing</h3>
